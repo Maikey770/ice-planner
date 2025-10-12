@@ -1,0 +1,37 @@
+{
+  "name": "ice-planner",
+  "version": "1.0.0",
+  "description": "An interactive Ice Planner built with Lit and DDD Design System",
+  "license": "Apache-2.0",
+  "author": {
+    "name": "YourName"
+  },
+  "keywords": [
+    "webcomponents",
+    "lit",
+    "haxtheweb",
+    "ice-planner"
+  ],
+  "type": "module",
+  "main": "ice-planner.js",
+  "scripts": {
+    "dev": "web-dev-server --open",
+    "start": "web-dev-server",
+    "build": "rimraf public && rollup -c rollup.config.js && npm run analyze",
+    "analyze": "cem analyze --litelement --exclude public",
+    "test": "web-test-runner test/**/*.test.js --coverage --node-resolve"
+  },
+  "dependencies": {
+    "lit": "^3.3.1",
+    "@haxtheweb/d-d-d": "^11.0.5"
+  },
+  "devDependencies": {
+    "@web/dev-server": "^0.4.6",
+    "rimraf": "^5.0.7"
+  },
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "customElements": "custom-elements.json"
+}
