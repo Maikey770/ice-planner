@@ -2,28 +2,26 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Ice Planner</title>
     <style>
-      body {
-        margin: 0;
-        background-color: var(--ddd-theme-default-coalyGray);
-        color: var(--ddd-theme-default-white);
-        font-family: var(--ddd-font-primary);
+      :root {
+        --bg: #f6f7fb;
+        --fg: #222;
+        --card: #fff;
+        --pri: #0b72e7;
+        --muted: #8b8b8b;
       }
-      h1 {
-        text-align: center;
-        margin: 24px 0;
+      @media (prefers-color-scheme: dark) {
+        :root { --bg:#0f1115; --fg:#eaeef5; --card:#171a21; --pri:#66a6ff; --muted:#9aa3b2; }
       }
-      ice-planner {
-        display: block;
-        margin: 0 auto;
-        max-width: 800px;
-      }
+      body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.5 system-ui, Segoe UI, Roboto, Arial; }
+      h1 { text-align:center; margin:24px 0; font-weight:800; color:var(--pri); }
+      ice-planner { display:block; margin:0 auto 56px; max-width:860px; }
     </style>
   </head>
   <body>
-    <h1>❄️ Ice Planner</h1>
+    <h1>Ice Planner</h1>
     <ice-planner></ice-planner>
     <script type="module" src="./ice-planner.js"></script>
   </body>
